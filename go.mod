@@ -1,4 +1,4 @@
-module github.com/rehiy/one-llm
+module github.com/yaobohai/wrest-chat-one-llm
 
 go 1.20
 
