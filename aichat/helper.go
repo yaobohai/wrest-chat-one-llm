@@ -21,6 +21,8 @@ func Text(msg string, llmc *UserConfig) string {
 		res, err = GoogleText(msg, llmc)
 	case "openai":
 		res, err = OpenaiText(msg, llmc)
+	case "xai":
+		res, err = XaiText(msg, llmc)
 	case "tencent":
 		res, err = TencentText(msg, llmc)
 	case "xunfei":
