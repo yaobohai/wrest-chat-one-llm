@@ -27,7 +27,7 @@ package main
 import (
     "context"
     "fmt"
-    . "github.com/rehiy/one-llm/baidu"
+    . "github.com/yaobohai/wrest-chat-one-llm/baidu"
 )
 
 func main() {

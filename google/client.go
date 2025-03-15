@@ -3,7 +3,7 @@ package google
 import (
 	"encoding/json"
 
-	"github.com/rehiy/one-llm/internal/httpc"
+	"github.com/yaobohai/wrest-chat-one-llm/internal/httpc"
 )
 
 type Client struct {
@@ -14,13 +14,13 @@ type Client struct {
 	SafetySettings []ChatCompletionSafetySetting
 }
 
-func NewClient(key string) *Client {
+func NewClient(Model string, key string) *Client {
 
 	return &Client{
 		ApiBaseUrl: ApiBaseUrl,
 		ApiVersion: ApiVersion,
 		ApiKey:     key,
-		Model:      "gemini-pro",
+		Model:      Model,
 	}
 
 }
@@ -65,7 +65,7 @@ func (c *Client) CreateVisionCompletion(contents []ChatCompletionMessage) (ChatC
 		"x-goog-api-key": c.ApiKey,
 	}
 
-	url := c.ApiBaseUrl + "/" + c.ApiVersion + "/models/gemini-pro-vision:generateContent"
+	url := c.ApiBaseUrl + "/" + c.ApiVersion + "/v1beta/models/gemini-1.5-flash-latest:generateContent"
 	response, err := httpc.JsonPost(url, query, heaner)
 	if err != nil {
 		return resp, err

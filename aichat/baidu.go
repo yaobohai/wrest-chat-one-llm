@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/rehiy/one-llm/baidu"
+	"github.com/yaobohai/wrest-chat-one-llm/baidu"
 )
 
 func BaiduText(ask string, llmc *UserConfig) (string, error) {
@@ -16,8 +16,8 @@ func BaiduText(ask string, llmc *UserConfig) (string, error) {
 	}
 
 	model := "completions_pro"
-	if len(llmc.Model) > 1 {
-		model = llmc.Model
+	if len(llmc.Models) > 1 {
+		model = llmc.Models
 	}
 
 	// 初始化模型

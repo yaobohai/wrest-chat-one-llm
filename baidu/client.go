@@ -8,7 +8,7 @@ import (
 	"net/http"
 	neturl "net/url"
 
-	utils "github.com/rehiy/one-llm/internal"
+	utils "github.com/yaobohai/wrest-chat-one-llm/internal"
 )
 
 // Client is OpenAI GPT-3 API client.

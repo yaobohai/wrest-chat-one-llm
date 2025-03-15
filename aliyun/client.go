@@ -3,7 +3,7 @@ package aliyun
 import (
 	"encoding/json"
 
-	"github.com/rehiy/one-llm/internal/httpc"
+	"github.com/yaobohai/wrest-chat-one-llm/internal/httpc"
 )
 
 type Client struct {

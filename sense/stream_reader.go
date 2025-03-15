@@ -8,7 +8,7 @@ import (
 	"io"
 	"net/http"
 
-	utils "github.com/rehiy/one-llm/internal"
+	utils "github.com/yaobohai/wrest-chat-one-llm/internal"
 )
 
 type streamable interface {

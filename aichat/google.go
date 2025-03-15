@@ -4,7 +4,7 @@ import (
 	"errors"
 	"regexp"
 
-	"github.com/rehiy/one-llm/google"
+	"github.com/yaobohai/wrest-chat-one-llm/google"
 )
 
 func GoogleText(ask string, llmc *UserConfig) (string, error) {
@@ -13,8 +13,8 @@ func GoogleText(ask string, llmc *UserConfig) (string, error) {
 
 	client := google.NewClient(llmc.Secret)
 
-	if len(llmc.Model) > 1 {
-		client.Model = llmc.Model
+	if len(llmc.Models) > 1 {
+		client.Model = llmc.Models
 	}
 
 	if len(llmc.Endpoint) > 1 {

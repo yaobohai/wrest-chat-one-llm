@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/rehiy/one-llm/xunfei"
+	"github.com/yaobohai/wrest-chat-one-llm/xunfei"
 )
 
 func XunfeiText(ask string, llmc *UserConfig) (string, error) {
@@ -17,8 +17,8 @@ func XunfeiText(ask string, llmc *UserConfig) (string, error) {
 	}
 
 	model := "v3.5"
-	if len(llmc.Model) > 1 {
-		model = llmc.Model
+	if len(llmc.Models) > 1 {
+		model = llmc.Models
 	}
 
 	// 初始化模型

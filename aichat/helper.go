@@ -75,7 +75,7 @@ type UserConfig struct {
 	Family   string `json:"family"`   // 族类描述
 	Provider string `json:"provider"` // 供应商
 	Endpoint string `json:"endpoint"` // 接口地址
-	Model    string `json:"model"`    // 模型
+	Models   string `json:"models"`   // 模型
 	// 密钥格式
 	// 科大讯飞 APP-ID,API-KEY,API-SECRET
 	// 文心一言 API-KEY,API-SECRET

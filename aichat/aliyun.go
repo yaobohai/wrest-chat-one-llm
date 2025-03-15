@@ -3,7 +3,7 @@ package aichat
 import (
 	"errors"
 
-	"github.com/rehiy/one-llm/aliyun"
+	"github.com/yaobohai/wrest-chat-one-llm/aliyun"
 )
 
 func AliyunText(ask string, llmc *UserConfig) (string, error) {
@@ -12,8 +12,8 @@ func AliyunText(ask string, llmc *UserConfig) (string, error) {
 
 	client := aliyun.NewClient(llmc.Secret)
 
-	if len(llmc.Model) > 1 {
-		client.Model = llmc.Model
+	if len(llmc.Models) > 1 {
+		client.Model = llmc.Models
 	}
 
 	if len(llmc.Endpoint) > 1 {

@@ -24,8 +24,8 @@ func XaiText(ask string, llmc *UserConfig) (string, error) {
 		Messages:  []openai.ChatCompletionMessage{},
 	}
 
-	if len(llmc.Model) > 1 {
-		req.Model = llmc.Model
+	if len(llmc.Models) > 1 {
+		req.Model = llmc.Models
 	}
 
 	// 设置上下文
