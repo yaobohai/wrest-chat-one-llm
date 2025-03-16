@@ -11,7 +11,7 @@ func GoogleText(ask string, llmc *UserConfig) (string, error) {
 
 	// 初始化模型
 
-	client := google.NewClient(llmc.Secret)
+	client := google.NewClient(llmc.Secret, llmc.Models)  // 添加第二个参数
 
 	if len(llmc.Models) > 1 {
 		client.Model = llmc.Models
@@ -86,7 +86,7 @@ func GoogleVison(ask, img string, llmc *UserConfig) (string, error) {
 
 	// 初始化模型
 
-	client := google.NewClient(llmc.Secret)
+	client := google.NewClient(llmc.Secret, llmc.Models)  // 添加第二个参数
 
 	if llmc.Endpoint != "" {
 		client.ApiBaseUrl = llmc.Endpoint
