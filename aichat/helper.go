@@ -23,8 +23,6 @@ func Text(msg string, llmc *UserConfig) string {
 		res, err = OpenaiText(msg, llmc)
 	case "xai":
 		res, err = XaiText(msg, llmc)
-	case "tencent":
-		res, err = TencentText(msg, llmc)
 	case "xunfei":
 		res, err = XunfeiText(msg, llmc)
 	case "":

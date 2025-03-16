@@ -14,15 +14,14 @@ type Client struct {
 	SafetySettings []ChatCompletionSafetySetting
 }
 
-func NewClient(Model string, key string) *Client {
+func NewClient(key string, Models string) *Client {
 
 	return &Client{
 		ApiBaseUrl: ApiBaseUrl,
 		ApiVersion: ApiVersion,
 		ApiKey:     key,
-		Model:      Model,
+		Model:      Models,
 	}
-
 }
 
 func (c *Client) CreateChatCompletion(contents []ChatCompletionMessage) (ChatCompletionResponse, error) {
